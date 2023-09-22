@@ -1,324 +1,1725 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:x="urn:schemas-microsoft-com:office:excel"
-xmlns="http://www.w3.org/TR/REC-html40">
-
-<head>
-<meta name="Excel Workbook Frameset">
-<meta http-equiv=Content-Type content="text/html; charset=ks_c_5601-1987">
-<meta name=ProgId content=Excel.Sheet>
-<meta name=Generator content="Microsoft Excel 15">
-<link rel=File-List href="9월마트현황종합.files/filelist.xml">
-<![if !supportTabStrip]>
-<link id="shLink" href="9월마트현황종합.files/sheet001.htm">
-
-<link id="shLink">
-
-<script language="JavaScript">
-<!--
- var c_lTabs=1;
-
- var c_rgszSh=new Array(c_lTabs);
- c_rgszSh[0] = "Table&nbsp;1";
-
-
-
- var c_rgszClr=new Array(8);
- c_rgszClr[0]="window";
- c_rgszClr[1]="buttonface";
- c_rgszClr[2]="windowframe";
- c_rgszClr[3]="windowtext";
- c_rgszClr[4]="threedlightshadow";
- c_rgszClr[5]="threedhighlight";
- c_rgszClr[6]="threeddarkshadow";
- c_rgszClr[7]="threedshadow";
-
- var g_iShCur;
- var g_rglTabX=new Array(c_lTabs);
-
-function fnGetIEVer()
-{
- var ua=window.navigator.userAgent
- var msie=ua.indexOf("MSIE")
- if (msie>0 && window.navigator.platform=="Win32")
-  return parseInt(ua.substring(msie+5,ua.indexOf(".", msie)));
- else
-  return 0;
-}
-
-function fnBuildFrameset()
-{
- var szHTML="<frameset rows=\"*,18\" border=0 width=0 frameborder=no framespacing=0>"+
-  "<frame src=\""+document.all.item("shLink")[0].href+"\" name=\"frSheet\" noresize>"+
-  "<frameset cols=\"54,*\" border=0 width=0 frameborder=no framespacing=0>"+
-  "<frame src=\"\" name=\"frScroll\" marginwidth=0 marginheight=0 scrolling=no>"+
-  "<frame src=\"\" name=\"frTabs\" marginwidth=0 marginheight=0 scrolling=no>"+
-  "</frameset></frameset><plaintext>";
-
- with (document) {
-  open("text/html","replace");
-  write(szHTML);
-  close();
- }
-
- fnBuildTabStrip();
-}
-
-function fnBuildTabStrip()
-{
- var szHTML=
-  "<html><head><style>.clScroll {font:8pt Courier New;color:"+c_rgszClr[6]+";cursor:default;line-height:10pt;}"+
-  ".clScroll2 {font:10pt Arial;color:"+c_rgszClr[6]+";cursor:default;line-height:11pt;}</style></head>"+
-  "<body onclick=\"event.returnValue=false;\" ondragstart=\"event.returnValue=false;\" onselectstart=\"event.returnValue=false;\" bgcolor="+c_rgszClr[4]+" topmargin=0 leftmargin=0><table cellpadding=0 cellspacing=0 width=100%>"+
-  "<tr><td colspan=6 height=1 bgcolor="+c_rgszClr[2]+"></td></tr>"+
-  "<tr><td style=\"font:1pt\">&nbsp;<td>"+
-  "<td valign=top id=tdScroll class=\"clScroll\" onclick=\"parent.fnFastScrollTabs(0);\" onmouseover=\"parent.fnMouseOverScroll(0);\" onmouseout=\"parent.fnMouseOutScroll(0);\"><a>&#171;</a></td>"+
-  "<td valign=top id=tdScroll class=\"clScroll2\" onclick=\"parent.fnScrollTabs(0);\" ondblclick=\"parent.fnScrollTabs(0);\" onmouseover=\"parent.fnMouseOverScroll(1);\" onmouseout=\"parent.fnMouseOutScroll(1);\"><a>&lt</a></td>"+
-  "<td valign=top id=tdScroll class=\"clScroll2\" onclick=\"parent.fnScrollTabs(1);\" ondblclick=\"parent.fnScrollTabs(1);\" onmouseover=\"parent.fnMouseOverScroll(2);\" onmouseout=\"parent.fnMouseOutScroll(2);\"><a>&gt</a></td>"+
-  "<td valign=top id=tdScroll class=\"clScroll\" onclick=\"parent.fnFastScrollTabs(1);\" onmouseover=\"parent.fnMouseOverScroll(3);\" onmouseout=\"parent.fnMouseOutScroll(3);\"><a>&#187;</a></td>"+
-  "<td style=\"font:1pt\">&nbsp;<td></tr></table></body></html>";
-
- with (frames['frScroll'].document) {
-  open("text/html","replace");
-  write(szHTML);
-  close();
- }
-
- szHTML =
-  "<html><head>"+
-  "<style>A:link,A:visited,A:active {text-decoration:none;"+"color:"+c_rgszClr[3]+";}"+
-  ".clTab {cursor:hand;background:"+c_rgszClr[1]+";font:9pt 굴림;padding-left:3px;padding-right:3px;text-align:center;}"+
-  ".clBorder {background:"+c_rgszClr[2]+";font:1pt;}"+
-  "</style></head><body onload=\"parent.fnInit();\" onselectstart=\"event.returnValue=false;\" ondragstart=\"event.returnValue=false;\" bgcolor="+c_rgszClr[4]+
-  " topmargin=0 leftmargin=0><table id=tbTabs cellpadding=0 cellspacing=0>";
-
- var iCellCount=(c_lTabs+1)*2;
-
- var i;
- for (i=0;i<iCellCount;i+=2)
-  szHTML+="<col width=1><col>";
-
- var iRow;
- for (iRow=0;iRow<6;iRow++) {
-
-  szHTML+="<tr>";
-
-  if (iRow==5)
-   szHTML+="<td colspan="+iCellCount+"></td>";
-  else {
-   if (iRow==0) {
-    for(i=0;i<iCellCount;i++)
-     szHTML+="<td height=1 class=\"clBorder\"></td>";
-   } else if (iRow==1) {
-    for(i=0;i<c_lTabs;i++) {
-     szHTML+="<td height=1 nowrap class=\"clBorder\">&nbsp;</td>";
-     szHTML+=
-      "<td id=tdTab height=1 nowrap class=\"clTab\" onmouseover=\"parent.fnMouseOverTab("+i+");\" onmouseout=\"parent.fnMouseOutTab("+i+");\">"+
-      "<a href=\""+document.all.item("shLink")[i].href+"\" target=\"frSheet\" id=aTab>&nbsp;"+c_rgszSh[i]+"&nbsp;</a></td>";
-    }
-    szHTML+="<td id=tdTab height=1 nowrap class=\"clBorder\"><a id=aTab>&nbsp;</a></td><td width=100%></td>";
-   } else if (iRow==2) {
-    for (i=0;i<c_lTabs;i++)
-     szHTML+="<td height=1></td><td height=1 class=\"clBorder\"></td>";
-    szHTML+="<td height=1></td><td height=1></td>";
-   } else if (iRow==3) {
-    for (i=0;i<iCellCount;i++)
-     szHTML+="<td height=1></td>";
-   } else if (iRow==4) {
-    for (i=0;i<c_lTabs;i++)
-     szHTML+="<td height=1 width=1></td><td height=1></td>";
-    szHTML+="<td height=1 width=1></td><td></td>";
-   }
-  }
-  szHTML+="</tr>";
- }
-
- szHTML+="</table></body></html>";
- with (frames['frTabs'].document) {
-  open("text/html","replace");
-  charset=document.charset;
-  write(szHTML);
-  close();
- }
-}
-
-function fnInit()
-{
- g_rglTabX[0]=0;
- var i;
- for (i=1;i<=c_lTabs;i++)
-  with (frames['frTabs'].document.all.tbTabs.rows[1].cells[fnTabToCol(i-1)])
-   g_rglTabX[i]=offsetLeft+offsetWidth-6;
-}
-
-function fnTabToCol(iTab)
-{
- return 2*iTab+1;
-}
-
-function fnNextTab(fDir)
-{
- var iNextTab=-1;
- var i;
-
- with (frames['frTabs'].document.body) {
-  if (fDir==0) {
-   if (scrollLeft>0) {
-    for (i=0;i<c_lTabs&&g_rglTabX[i]<scrollLeft;i++);
-    if (i<c_lTabs)
-     iNextTab=i-1;
-   }
-  } else {
-   if (g_rglTabX[c_lTabs]+6>offsetWidth+scrollLeft) {
-    for (i=0;i<c_lTabs&&g_rglTabX[i]<=scrollLeft;i++);
-    if (i<c_lTabs)
-     iNextTab=i;
-   }
-  }
- }
- return iNextTab;
-}
-
-function fnScrollTabs(fDir)
-{
- var iNextTab=fnNextTab(fDir);
-
- if (iNextTab>=0) {
-  frames['frTabs'].scroll(g_rglTabX[iNextTab],0);
-  return true;
- } else
-  return false;
-}
-
-function fnFastScrollTabs(fDir)
-{
- if (c_lTabs>16)
-  frames['frTabs'].scroll(g_rglTabX[fDir?c_lTabs-1:0],0);
- else
-  if (fnScrollTabs(fDir)>0) window.setTimeout("fnFastScrollTabs("+fDir+");",5);
-}
-
-function fnSetTabProps(iTab,fActive)
-{
- var iCol=fnTabToCol(iTab);
- var i;
-
- if (iTab>=0) {
-  with (frames['frTabs'].document.all) {
-   with (tbTabs) {
-    for (i=0;i<=4;i++) {
-     with (rows[i]) {
-      if (i==0)
-       cells[iCol].style.background=c_rgszClr[fActive?0:2];
-      else if (i>0 && i<4) {
-       if (fActive) {
-        cells[iCol-1].style.background=c_rgszClr[2];
-        cells[iCol].style.background=c_rgszClr[0];
-        cells[iCol+1].style.background=c_rgszClr[2];
-       } else {
-        if (i==1) {
-         cells[iCol-1].style.background=c_rgszClr[2];
-         cells[iCol].style.background=c_rgszClr[1];
-         cells[iCol+1].style.background=c_rgszClr[2];
-        } else {
-         cells[iCol-1].style.background=c_rgszClr[4];
-         cells[iCol].style.background=c_rgszClr[(i==2)?2:4];
-         cells[iCol+1].style.background=c_rgszClr[4];
-        }
-       }
-      } else
-       cells[iCol].style.background=c_rgszClr[fActive?2:4];
-     }
-    }
-   }
-   with (aTab[iTab].style) {
-    cursor=(fActive?"default":"hand");
-    color=c_rgszClr[3];
-   }
-  }
- }
-}
-
-function fnMouseOverScroll(iCtl)
-{
- frames['frScroll'].document.all.tdScroll[iCtl].style.color=c_rgszClr[7];
-}
-
-function fnMouseOutScroll(iCtl)
-{
- frames['frScroll'].document.all.tdScroll[iCtl].style.color=c_rgszClr[6];
-}
-
-function fnMouseOverTab(iTab)
-{
- if (iTab!=g_iShCur) {
-  var iCol=fnTabToCol(iTab);
-  with (frames['frTabs'].document.all) {
-   tdTab[iTab].style.background=c_rgszClr[5];
-  }
- }
-}
-
-function fnMouseOutTab(iTab)
-{
- if (iTab>=0) {
-  var elFrom=frames['frTabs'].event.srcElement;
-  var elTo=frames['frTabs'].event.toElement;
-
-  if ((!elTo) ||
-   (elFrom.tagName==elTo.tagName) ||
-   (elTo.tagName=="A" && elTo.parentElement!=elFrom) ||
-   (elFrom.tagName=="A" && elFrom.parentElement!=elTo)) {
-
-   if (iTab!=g_iShCur) {
-    with (frames['frTabs'].document.all) {
-     tdTab[iTab].style.background=c_rgszClr[1];
-    }
-   }
-  }
- }
-}
-
-function fnSetActiveSheet(iSh)
-{
- if (iSh!=g_iShCur) {
-  fnSetTabProps(g_iShCur,false);
-  fnSetTabProps(iSh,true);
-  g_iShCur=iSh;
- }
-}
-
- window.g_iIEVer=fnGetIEVer();
- if (window.g_iIEVer>=4)
-  fnBuildFrameset();
-//-->
-</script>
-<![endif]><!--[if gte mso 9]><xml>
- <x:ExcelWorkbook>
-  <x:ExcelWorksheets>
-   <x:ExcelWorksheet>
-    <x:Name>Table 1</x:Name>
-    <x:WorksheetSource HRef="9월마트현황종합.files/sheet001.htm"/>
-   </x:ExcelWorksheet>
-  </x:ExcelWorksheets>
-  <x:Stylesheet HRef="9월마트현황종합.files/stylesheet.css"/>
-  <x:WindowHeight>9150</x:WindowHeight>
-  <x:WindowWidth>15330</x:WindowWidth>
-  <x:WindowTopX>0</x:WindowTopX>
-  <x:WindowTopY>0</x:WindowTopY>
-  <x:ProtectStructure>False</x:ProtectStructure>
-  <x:ProtectWindows>False</x:ProtectWindows>
- </x:ExcelWorkbook>
-</xml><![endif]-->
-</head>
-
-<frameset rows="*,39" border=0 width=0 frameborder=no framespacing=0>
- <frame src="9월마트현황종합.files/sheet001.htm" name="frSheet">
- <frame src="9월마트현황종합.files/tabstrip.htm" name="frTabs" marginwidth=0 marginheight=0>
- <noframes>
-  <body>
-   <p>이 페이지에는 프레임이 있지만 사용 중인 브라우저에서 프레임을 지원하지 않습니다.</p>
-  </body>
- </noframes>
-</frameset>
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+		<style>
+			table{font-size: 90%; border-collapse : collapse; margin : auto; text-align:center;}
+			tr{height:30px;}
+			a { text-decoration: none; }
+			a:visited {color: red;}
+			.bb  {border-top: 1px solid black;border-bottom: 1px solid black;border-left: 1px solid black;border-right: 1px solid black;}
+			.bc  {border-top: 1px solid black;border-left: 1px solid black;border-right: 1px solid black;}
+		</style>
+	</head>
+	<div>
+		<table cellpadding="5px">
+			<colgroup>
+			<col width="3%">
+			<col width="5%">
+			<col width="9%">
+			<col width="5%">
+			<col width="5%">
+			<col width="5%">
+			<col width="6%">
+			<col width="6%">
+			<col width="6%">
+			<col width="7%">
+			<col width="7%">
+			<col width="37%">
+			</colgroup>
+			<tr>
+				<td align="center" COLSPAN="12" ROWSPAN="1" class="bb" style="color:#000000"><div style=font-size:18pt><strong>23년 9월 군마트 세부 운영현황(전체)</strong></div></td>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</tr>
+			<tr>
+				<td align="center" COLSPAN="1" ROWSPAN="3" class="bb" style="background-color:#FFF2CC; color:#000000"><div style=font-size:10pt>&nbsp;</div></td>
+				<td align="center" COLSPAN="1" ROWSPAN="3" class="bb" style="background-color:#FFF2CC; color:#000000">지원 본부</td>
+				<td align="center" COLSPAN="1" ROWSPAN="3" class="bb" style="background-color:#FFF2CC; color:#000000">마트명</td>
+				<td align="center" COLSPAN="7" ROWSPAN="1" class="bb" style="background-color:#FFF2CC; color:#000000"><div style=font-size:10pt>마트운영</div></td>
+				
+				
+				
+				
+				
+				
+				<td align="center" COLSPAN="1" ROWSPAN="3" class="bb" style="background-color:#FFF2CC; color:#000000">마트번호</td>
+				<td align="center" COLSPAN="1" ROWSPAN="3" class="bb" style="background-color:#FFF2CC; color:#000000">위치</td>
+			</tr>
+			<tr>
+				
+				
+				
+				<td align="center" COLSPAN="3" ROWSPAN="1" class="bb" style="background-color:#FFF2CC; color:#000000"><div style=font-size:10pt>운영시간</div></td>
+				
+				
+				<td align="center" COLSPAN="3" ROWSPAN="1" class="bb" style="background-color:#FFF2CC; color:#000000"><div style=font-size:10pt>점심시간</div></td>
+				
+				
+				<td align="center" COLSPAN="1" ROWSPAN="2" class="bb" style="background-color:#FFF2CC; color:#000000"><div style=font-size:8.55pt>비고</div></td>
+				
+				
+			</tr>
+			<tr>
+				
+				
+				
+				<td align="center"  class="bb" style="background-color:#FFF2CC; color:#000000">평일</td>
+				<td align="center"  class="bb" style="background-color:#FFF2CC; color:#000000">토</td>
+				<td align="center"  class="bb" style="background-color:#FFF2CC; color:#000000"><div style=font-size:10pt>일</div></td>
+				<td align="center"  class="bb" style="background-color:#FFF2CC; color:#000000">평일</td>
+				<td align="center"  class="bb" style="background-color:#FFF2CC; color:#000000">토</td>
+				<td align="center"  class="bb" style="background-color:#FFF2CC; color:#000000"><div style=font-size:10pt>일</div></td>
+				
+				
+				
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">1</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>박달(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-445-4595</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 안양시 만안구 삼봉로 66(박달동, 브라운스톤 하나마을)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">2</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>사당(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>02-583-3425</div></td>
+				<td align="center"  class="bb" style="color:#000000">서울시 관악구 승방7길31(남현동, 사당동아파트) 사당동아파트 3동 앞</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">3</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>방패(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0873</div></td>
+				<td align="center"  class="bb" style="color:#000000">서울시 관악구 과천대로 851(남현동, 한울아파트) 상가1층</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">4</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>전승(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0652</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 화성시 매송면 화성로 2435(칠보아파트) 전승회관</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">5</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>선봉(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>10:30~15:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-336-2872</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 용인시 처인구 중부대로 1340(김량장동, 한누리마을아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">6</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>선봉레스텔(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0743</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 용인시 처인구 금학로 235번길26(역북동, 온누리마을) 온누리마을 내</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">7</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>상승(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000">031-640-1126<br />070-4251-0803</td>
+				<td align="center"  class="bb" style="color:#000000">경기도 이천시 장호원읍 경충대로 597번길 227-25 상승회관1층</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">8</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>도하(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>수요일 휴점</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-2303</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 이천시 설성면 자석 1리 508(자석1리 마을회관)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">9</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>(해)서해(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-4074</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 평택시 포승읍 2함대길 20 서해쇼핑타운 지하1층</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">10</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>비승(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0810</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 이천시 진상미로 1700-29(대포동, 비승아파트) 비승회관1층</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">11</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>아름(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-631-4151</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 이천시 마장면 마도로 12(아름수리아파트) 아름회관 1층</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">12</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>관사(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0816</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 수원시 권선구 경수대로 168번길 79(권선동) 복지매장 1층</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">13</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>(공)금성(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0667</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 평택시 팽성읍 동서촌로 161-9 1층</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">14</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>항무(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>수요일 휴점</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0646</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 하남시 초일로 78(초일동) 에어팰리시스 내 면회실 1층</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">15</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>충일(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-591-1173</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 남양주시 홍유릉로 134(이패동) 충일회관 1층</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">16</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>럭키(영외)</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>11:00~16:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0641</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 성남시 분당구 이매로 173(이매동) 럭키회관 1층 108호</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">17</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>충호(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0593</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>경기도 남양주시 와부읍 석실로 260번길 80(7A빌리지) 충호회관 앞</div></td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">18</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>우정(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-755-4656</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 성남시 수정구 대왕판교로 1187(심곡동) 우정아파트 내</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">19</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>동빙고(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>02-790-8979</div></td>
+				<td align="center"  class="bb" style="color:#000000">서울시 용산구 녹사평대로 66(동빙고동, 용산푸르지오파크타운) 푸르지오파크타운 관리실앞</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">20</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>(공)태성대(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0613</div></td>
+				<td align="center"  class="bb" style="color:#000000">서울시 동작구 여의대방로 16길 1(신대방동, 태성대아파트) 복지관 1층</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">21</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>(공)대방(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>02-833-4789</div></td>
+				<td align="center"  class="bb" style="color:#000000">서울시 영등포구 여의대방로 49길 3(신길동)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">22</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서울</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>(해)바다마을(영외)</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>10:0.0~19:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>10:30~14:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>마지막주 수요<br />15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0616</div></td>
+				<td align="center"  class="bb" style="color:#000000">서울시 영등포구 가마산로 540(신길동) 바다마을 상가 1층</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">23</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>고양</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>연풍(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>14:00~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-953-6056</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 파주시 파주읍 술이홀로 490</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">24</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>고양</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>선유리(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>14:00~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-952-1433</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><strong>경기도 파주시 문산읍 사임당로 104</strong></td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">25</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>고양</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>드림(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>14:00~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-2567</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 파주시 광탄면 보광로 962</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">26</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>고양</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>에버나인(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>14:00~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-907-6559</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 고양시 일산동구 숲속마을 2로 25(풍동, 숲속마을 10단지 아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">27</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>고양</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>금촌에버나인(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>14:00~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-946-7123</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 파주시 창곡동길 24(야동동)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">28</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>고양</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>화이트빌(영외)</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>11:00~19:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>10:00~13:50</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>&nbsp;</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>14:00~16:00</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>&nbsp;</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>&nbsp;</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.55pt><strong>&nbsp;</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-975-0886</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 고양시 일산동구 성석로 285-78(성석동)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">29</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>고양</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>북한산(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>14:00~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-4086</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기 고양시 덕양구 백운길 27-41(지축동)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">30</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>고양</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>화전(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>14:00~15:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>02-3158-2501</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 고양시 덕양구 중앙로 132-5(화전동)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">31</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>고양</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>권율(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>14:00~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>02-352-8614</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 고양시 덕양구 서오릉로 500번길 141-7(동산동)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">32</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>고양</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>광개토(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>14:00~15:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-4063</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 고양시 덕양구 호국로 1895(벽제동, 삼성벽제아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">33</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>고양</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>올림픽(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>14:00~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0560</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기 양주시 장흥면 북한산로 966-8(충성아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">34</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>고양</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>황룡(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>14:00~15:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-981-0761</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 김포시 통진읍 검암1로</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">35</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>양주</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>통현(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~14:50</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0972</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 연천군 연천읍 평화로 1239(연천아이파크)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">36</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>양주</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천푸르미(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~14:50</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-542-9240</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 포천시 소흘읍 호국로 523번길61(푸르미아르미소 아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">37</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>양주</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>전곡푸르미(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~14:50</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-4067</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도  연천군 전곡읍 평화로 673번길 61</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">38</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>양주</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>백석(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~14:50</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-879-7810</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 양주시 백석읍 부흥로 1071-41</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">39</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>양주</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>의정부푸르미(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~14:50</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-873-0187</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 의정부시 가능동 238-30(푸르미회관)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">40</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>양주</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>동두천(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~14:50</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-858-4036</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 동두천시 상패동20</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">41</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>양주</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>신산(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~14:50</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-863-6235</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 양주시 남면 개나리 11길 43</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">42</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>양주</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대광리(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~14:50</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-834-8071</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 연천군 신서면 연신로 1114(열쇠아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">43</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>양주</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>행복마을(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~14:50</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-4078</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도  파주시 적성면 칠중 1길 65</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">44</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>동송(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼18:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-455-2710</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 철원군 동송읍 금학로 121번길 12</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">45</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>이동승진(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼18:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-532-4576</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 포천시 이동면 화동로 2056</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">46</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>운천(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼18:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-532-0043</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 포천시 영북면 영북로 206(산내들 아이파크내)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">47</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>에이트빌(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:30~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-534-4876</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 포천시 이동면 성장로 721(에이트 빌)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">48</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>승포아트빌(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼18:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-452-2855</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 철원군 갈말읍 태봉로 1526-29 (목련아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">49</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>백골(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼18:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-458-8115</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 철원군 김화읍 김화로 309(청양 아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">50</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>삼성(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:30∼19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼18:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-458-8821</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 철원군 서면 자등로 599</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">51</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>맹호(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼18:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-584-8487</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 가평군 조종면 현창로 10</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">52</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>철마(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼18:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-575-4108</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 남양주시 전접읍 광릉내로 82번길 19-7(크낙새아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">53</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>횃불(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼18:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-581-6315</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 가평군 가평읍 용추로 57(횃불회관)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">54</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>일동승진(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼18:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-536-3846</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 포천시 화현면 화동로 587(승진아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">55</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>포천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>오뚜기빌(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00∼18:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00∼14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-531-6586</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 포천시 일동면 소야길 52(오뚜기아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">56</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>사방(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00∼13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00∼13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-3764</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 화천군 상서면 영서로 7739-14</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">57</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>화천(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-4061</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 화천군 화천읍 상승로 8길 25-73</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">58</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>승리(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00∼13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-3767</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 화천군 상서면 신월동로 125(화인빌아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">59</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>다목(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00∼13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-3761</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 화천군 상서면 수피령로 1315</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">60</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>명월(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-441-0880</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 화천군 사내면 복주산길 1(한아름아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">61</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>사창(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-441-4039</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 화천군 사내면 상록길 7-1</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">62</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>필승(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00∼13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-458-2159</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 철원군 근남면 수피령로 2312</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">63</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>소양(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>11:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-3081</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 춘천시 충열로 80(우두동, 소양아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">64</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>신동(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-3762</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 춘천시 옥산포길 40-14(사농동)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">65</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>두미르(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>11:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-3766</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 춘천시 영서로 2793(우두동, 두미르마을)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">66</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>(공)대룡(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00∼13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00∼13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0736</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 춘천시 동내면 학곡동 2길 46</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">67</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>화랑(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-433-5937</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 홍천군 홍천읍 무궁화로 4길 21(화랑아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">68</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>치악(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>11:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-761-1329</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 원주시 단구로 223(개운동)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">69</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>시동(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00∼13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-432-5280</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 홍천군 남면 시동안로 321번길 14-28(충성아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">70</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>충정(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>031-771-3279</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 양평군 양평읍 양근로 397</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">71</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>(공)용문산(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>15:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-4064</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 양평군 옥천면 고읍로 208</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">72</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>행복(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00∼13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0973</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 양평군 옥천면 마유산로 428-11</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">73</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>마룡리(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-4065</div></td>
+				<td align="center"  class="bb" style="color:#000000">경기도 양평균 용문면 용문로 465 (수무빌아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="background-color:#FFFF00; color:#000000">&nbsp;</td>
+				<td align="center"  class="bb" style="background-color:#FFFF00; color:#000000"><div style=font-size:8.5pt>춘천</div></td>
+				<td align="center"  class="bb" style="background-color:#FFFF00; color:#000000"><div style=font-size:8.5pt>백호(영외)</div></td>
+				<td align="center"  class="bb" style="background-color:#FFFF00; color:#FF0000"><div style=font-size:8.5pt>10:30~19:20</div></td>
+				<td align="center"  class="bb" style="background-color:#FFFF00; color:#FF0000"><div style=font-size:8.5pt>10:00~16:50</div></td>
+				<td align="center"  class="bb" style="background-color:#FFFF00; color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="background-color:#FFFF00; color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="background-color:#FFFF00; color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="background-color:#FFFF00; color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="background-color:#FFFF00; color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="background-color:#FFFF00; color:#000000">&nbsp;</td>
+				<td align="center"  class="bb" style="background-color:#FFFF00; color:#000000">강원도 원주시 소초면 흥앙로 220</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">74</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>양구(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-481-2782</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 양구군 양구읍 비봉로 49(상리군인아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">75</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>동면(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-481-9096</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 양구군 동면 금강산로 1801(대암아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">76</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>남면(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-482-4019</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 양구군 남면 정중앙로 728(백호아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">77</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>천도(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-462-4368</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 인제군 서화면 천도로 152번길 8</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">78</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서화(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-463-4108</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>강원도 인제군 서화면 금강로 1760</div></td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">79</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>현리(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-2379</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 인제군 기린면 내린천로 3898(현리군인아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">80</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>서호(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-461-7123</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 인제군 북면 원통로 15(서호아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">81</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>과훈단(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0324</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 인제군 남면 응봉길 94</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">82</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>원통(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-461-8990</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 인제군 북면 원통로 261-20(아르미소아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">83</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-461-8389</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 인제군 인제읍 인제로 315(행복아르미소)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">84</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>간성(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-682-4488</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 고성군 간성읍 간성북로 7번길 54-1</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">85</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>화진포콘도(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>수요 휴점</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-2209</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 고성군 거진읍 화진포길 330</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">86</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>양양(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>033-672-5644</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 양양군 양양읍 남서길 21(해오름아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">87</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>청간정콘도(영외)</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>09:30~18:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>09:30~18:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>09:30~18:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>12:00~13:00</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>12:00~13:00</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>12:00~13:00</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.55pt><strong>수요 휴점/<br />9.18일 오픈</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0549</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>강원도 고성군 토성면 중앙로 642-22</div></td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">88</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>행복드림(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-2567</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 동해시 중앙로 145(천곡동, 경포아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">89</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>사랑드림(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-2762</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 동해시 평릉길 60-1(평릉동, 사랑드림아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">90</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>송정콘도(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:30~18:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>수요 휴점<br />분리운영</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-2566</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 강릉시 창해로 141(송정동)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">91</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>인제</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>철벽(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~19:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:20</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-4103</div></td>
+				<td align="center"  class="bb" style="color:#000000">강원도 삼척시 갈천동 184-15(철벽레스텔)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">92</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대전</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>종행교(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>043-744-4472</div></td>
+				<td align="center"  class="bb" style="color:#000000">충북 영동군 영동읍 학산영동로 1216</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">93</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대전</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>문무(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>043-834-2229</div></td>
+				<td align="center"  class="bb" style="color:#000000">충북 괴산군 괴산읍 읍내로 194(문무아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">94</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대전</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>충용(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>043-838-4706</div></td>
+				<td align="center"  class="bb" style="color:#000000">충북 증평군 증평읍 초정약수로 1530(늘푸른아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">95</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대전</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>논산행복마을(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>041-742-2832</div></td>
+				<td align="center"  class="bb" style="color:#000000">충남 논산시 연무읍 안심로 139-1(연무행복마을아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">96</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대전</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대천콘도(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>041-932-6305</div></td>
+				<td align="center"  class="bb" style="color:#000000">충남 보령시 신흑동 2096</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">97</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대전</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>개나리(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-4249</div></td>
+				<td align="center"  class="bb" style="color:#000000">충남 계룡시 신도안면 청장리 268</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">98</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대전</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>국방대(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>041-831-3929</div></td>
+				<td align="center"  class="bb" style="color:#000000">충남 논산시 양촌면 황산벌로 1098번길 46</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">99</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대전</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>세종(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>11:00~17:00</strong></div></td>
+				<td align="right"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="right"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="right"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="right"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="right"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-4205</div></td>
+				<td align="center"  class="bb" style="color:#000000">세종특별자치시 금남면 채나무길 80</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">100</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대전</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>창공(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>09:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~17:00</div></td>
+				<td align="right"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="right"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="right"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="right"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-425-3009</div></td>
+				<td align="center"  class="bb" style="color:#000000">충남 논산시 노성면 노성로 430번지</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">101</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대구</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>(해)문덕(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>11:00~19:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>11:00~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-3765</div></td>
+				<td align="center"  class="bb" style="color:#000000">경북 포항시 남구 오천읍 정몽주로 문덕마을 481번지(그루터기 도서관 1층)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">102</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대구</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>무열(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-3128</div></td>
+				<td align="center"  class="bb" style="color:#000000">대구 수성구 무열로 56(만촌동)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">103</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대구</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>오성(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-3194</div></td>
+				<td align="center"  class="bb" style="color:#000000">대구 수성구 고모로 33길 84(연호동)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">104</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대구</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>(공)달성(영외)</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>10:30~20:00</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>13:00~13:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0744</div></td>
+				<td align="center"  class="bb" style="color:#000000">대구 수성구 달구벌대로 568길 36(이천동)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">105</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대구</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>무학(영외)</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>10:30~19:00</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>토요 격주운영</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>053-851-4866</div></td>
+				<td align="center"  class="bb" style="color:#000000">경북 경산시 하양읍 무학로 64-12(무학마을)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">106</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대구</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>충성대(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~13:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-3769</div></td>
+				<td align="center"  class="bb" style="color:#000000">경북 영천시 고경면 호국로 495</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">107</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>대구</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>두산(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-3635</div></td>
+				<td align="center"  class="bb" style="color:#000000">대구 북구 학정동 구리로 183-28(학정동, 두산아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">108</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>부산</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>무지개(영외)</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>14:00~19:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>14:00~19:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-4095</div></td>
+				<td align="center"  class="bb" style="color:#000000">부산광역시 해운대구 우동3로 94 무지개아파트</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">109</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>부산</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>장산마을(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0892</div></td>
+				<td align="center"  class="bb" style="color:#000000">부산광역시 해운대구 좌동순환로 15번길 24(좌동, 장산마을아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">110</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>부산</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>오륙도(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0883</div></td>
+				<td align="center"  class="bb" style="color:#000000">부산광역시 남구 무민사로 17(감만동, 오륙도아파트)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">111</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>부산</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>(공)해성(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-3664</div></td>
+				<td align="center"  class="bb" style="color:#000000">부산 강서구 대저동 공항진입로 42번길 20(대저2동)(해성스포렉스)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">112</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>부산</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>충무(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~14:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0928</div></td>
+				<td align="center"  class="bb" style="color:#000000">경남 함안군 군북면 함마대로 848 충무회관1층</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">113</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>부산</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>백운포(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~19:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>13:00~17:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>13:00~14:00</strong></div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>13:00~14:00</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>0507-1362-8726</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000">부산광역시 남구 이기대공원로 401(부산 해운회관 1층)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">114</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>광주</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>매화군(영외)</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>11:00~19:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:00~16:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>11:30~12:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>4,5주차<br />토요 휴점</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0542</div></td>
+				<td align="center"  class="bb" style="color:#000000">전남 담양군 답양읍 무정로 251-38</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">115</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>광주</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>충경군(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:30~19:30</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>10:00~14:30</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:30</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.5pt><strong>12:30~13:00</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#FF0000"><div style=font-size:8.55pt><strong>1.3주 토요운영</strong></div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0934</div></td>
+				<td align="center"  class="bb" style="color:#000000">전북 임실군 임실읍 대곡리 1077(충경레스텔 1층)</td>
+			</tr>
+			<tr>
+				<td align="center"  class="bb" style="color:#000000">116</td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>광주</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>천마군(영외)</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~19:50</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>10:00~15:30         </div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>11:30~12:30</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>&nbsp;</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>12:30~13:00</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.55pt>4주차<br />일요 휴점</div></td>
+				<td align="center"  class="bb" style="color:#000000"><div style=font-size:8.5pt>070-4251-0545</div></td>
+				<td align="center"  class="bb" style="color:#000000">전북 익산시 금마면 고도길 157-21(천마스카이빌)</td>
+			</tr>
+		</table>
+	</div>
 </html>
