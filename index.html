@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MND Data Table</title>
+</head>
+<body>
+    <h1>MND 안경원 정보</h1>
+    <table border="1" id="data-table">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>안경원명</th>
+                <th>주소</th>
+                <th>전화번호</th>
+                <th>행정구역</th>
+                <th>도시</th>
+            </tr>
+        </thead>
+        <tbody id="data-body">
+            <!-- 여기에 데이터를 동적으로 추가할 수 있습니다. -->
+        </tbody>
+    </table>
+
+    <script>
+        // 데이터를 가져오고 테이블에 추가하는 함수
+        function fetchData() {
+            // API 엔드포인트
+            var apiUrl = 'https://openapi.mnd.go.kr/3738313639313832303533303732303633/json/DS_TB_MND_GLAS_LIST/1/10000/';
+
+            // Fetch API를 사용하여 데이터를 요청
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // 원하는 데이터를 선택
+                    var items = data.DS_TB_MND_GLAS_LIST.row;
+
+                    // 선택한 데이터를 테이블에 추가
+                    var tableBody = document.getElementById('data-body');
+
+                    items.forEach(item => {
+                        var row = tableBody.insertRow();
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                        var cell3 = row.insertCell(2);
+                        var cell4 = row.insertCell(3);
+                        var cell5 = row.insertCell(4);
+                        var cell6 = row.insertCell(5);
+
+                        // 데이터를 셀에 추가
+                        cell1.textContent = item.postno;
+                        cell2.textContent = item.shop;
+                        cell3.textContent = item.address;
+                        cell4.textContent = item.telno;
+                        cell5.textContent = item.district;
+                        cell6.textContent = item.city;
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // 페이지 로딩 시 데이터를 가져오도록 호출
+        fetchData();
+    </script>
+</body>
+</html>
